@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "vmcCS9+mQdndXdefo2pj1QyBay/vQaQecwLnvRaIFgq0jGZJ0KO4oNU/OVSmkxxzgPZbUJjawX59RHVpGSxnSQ==",
+  "success": true,
+  "projectFilePath": "C:\\mywork\\SPPlabs\\SPP_3\\DirectoryScanner\\DirectoryScanner.Example\\DirectoryScanner.Example.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Home\\.nuget\\packages\\folderbrowserforwpf\\1.2.0\\folderbrowserforwpf.1.2.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,12 @@
+C:\mywork\SPPlabs\SPP_3\DirectoryScanner\DirectoryScanner.Core\bin\Debug\net6.0\DirectoryScanner.Core.deps.json
+C:\mywork\SPPlabs\SPP_3\DirectoryScanner\DirectoryScanner.Core\bin\Debug\net6.0\DirectoryScanner.Core.dll
+C:\mywork\SPPlabs\SPP_3\DirectoryScanner\DirectoryScanner.Core\bin\Debug\net6.0\DirectoryScanner.Core.pdb
+C:\mywork\SPPlabs\SPP_3\DirectoryScanner\DirectoryScanner.Core\obj\Debug\net6.0\DirectoryScanner.Core.csproj.AssemblyReference.cache
+C:\mywork\SPPlabs\SPP_3\DirectoryScanner\DirectoryScanner.Core\obj\Debug\net6.0\DirectoryScanner.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\mywork\SPPlabs\SPP_3\DirectoryScanner\DirectoryScanner.Core\obj\Debug\net6.0\DirectoryScanner.Core.AssemblyInfoInputs.cache
+C:\mywork\SPPlabs\SPP_3\DirectoryScanner\DirectoryScanner.Core\obj\Debug\net6.0\DirectoryScanner.Core.AssemblyInfo.cs
+C:\mywork\SPPlabs\SPP_3\DirectoryScanner\DirectoryScanner.Core\obj\Debug\net6.0\DirectoryScanner.Core.csproj.CoreCompileInputs.cache
+C:\mywork\SPPlabs\SPP_3\DirectoryScanner\DirectoryScanner.Core\obj\Debug\net6.0\DirectoryScanner.Core.dll
+C:\mywork\SPPlabs\SPP_3\DirectoryScanner\DirectoryScanner.Core\obj\Debug\net6.0\refint\DirectoryScanner.Core.dll
+C:\mywork\SPPlabs\SPP_3\DirectoryScanner\DirectoryScanner.Core\obj\Debug\net6.0\DirectoryScanner.Core.pdb
+C:\mywork\SPPlabs\SPP_3\DirectoryScanner\DirectoryScanner.Core\obj\Debug\net6.0\ref\DirectoryScanner.Core.dll
