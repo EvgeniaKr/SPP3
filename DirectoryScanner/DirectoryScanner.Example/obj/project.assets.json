@@ -13,6 +13,19 @@
         "frameworkReferences": [
           "Microsoft.WindowsDesktop.App.WPF"
         ]
+      },
+      "DirectoryScanner.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "FolderBrowserForWPF": "1.2.0"
+        },
+        "compile": {
+          "bin/placeholder/DirectoryScanner.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DirectoryScanner.Core.dll": {}
+        }
       }
     }
   },
@@ -29,10 +42,16 @@
         "lib/net472/FolderBrowserForWPF.dll",
         "lib/net5.0-windows7.0/FolderBrowserForWPF.dll"
       ]
+    },
+    "DirectoryScanner.Core/1.0.0": {
+      "type": "project",
+      "path": "../DirectoryScanner.Core/DirectoryScanner.Core.csproj",
+      "msbuildProject": "../DirectoryScanner.Core/DirectoryScanner.Core.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0-windows7.0": [
+      "DirectoryScanner.Core >= 1.0.0",
       "FolderBrowserForWPF >= 1.2.0"
     ]
   },
@@ -67,7 +86,11 @@
       "frameworks": {
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\mywork\\SPPlabs\\SPP_3\\DirectoryScanner\\DirectoryScanner.Core\\DirectoryScanner.Core.csproj": {
+              "projectPath": "C:\\mywork\\SPPlabs\\SPP_3\\DirectoryScanner\\DirectoryScanner.Core\\DirectoryScanner.Core.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

@@ -7,8 +7,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button Content="Выбрать каталог" HorizontalAlignment="Left" Height="31" Margin="10,25,0,0" VerticalAlignment="Top" Width="156" Click="Button_Click"/>
-        <TextBlock Name="TextBlock1" HorizontalAlignment="Left" Height="31" Margin="200,25,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="561"/>
+        <Button Content="Выбрать каталог" HorizontalAlignment="Left" Height="31" Margin="10,25,0,0" VerticalAlignment="Top" Width="156" Command="{Binding OpenDialog}"/>
+        <TextBlock Name="TextBlock1" HorizontalAlignment="Left" Height="31" Margin="200,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="561" Text="{Binding Path}"/>
 
     </Grid>
 </Window>

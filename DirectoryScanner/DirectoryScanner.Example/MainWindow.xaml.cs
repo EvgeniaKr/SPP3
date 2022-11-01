@@ -20,18 +20,15 @@ namespace DirectoryScanner.Example
     /// </summary>
     public partial class MainWindow : Window
     {
+        public ViewModel viewModel { get; set; }
         public MainWindow()
         {
+            
             InitializeComponent();
+            viewModel = new ViewModel();
+            this.DataContext = viewModel;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            var FolderPath = new FolderBrowserForWPF.Dialog();
-            if (FolderPath.ShowDialog() == true)
-            {
-                TextBlock1.Text = FolderPath.FileName;
-            }
-        }
+        
     }
 }

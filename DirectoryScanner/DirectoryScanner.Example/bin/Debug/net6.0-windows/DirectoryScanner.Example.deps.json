@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "DirectoryScanner.Example/1.0.0": {
         "dependencies": {
+          "DirectoryScanner.Core": "1.0.0",
           "FolderBrowserForWPF": "1.2.0"
         },
         "runtime": {
@@ -20,6 +21,14 @@
             "assemblyVersion": "1.2.0.0",
             "fileVersion": "1.2.0.0"
           }
+        }
+      },
+      "DirectoryScanner.Core/1.0.0": {
+        "dependencies": {
+          "FolderBrowserForWPF": "1.2.0"
+        },
+        "runtime": {
+          "DirectoryScanner.Core.dll": {}
         }
       }
     }
@@ -36,6 +45,11 @@
       "sha512": "sha512-CSVh14iL4unRKBSOjWakdch3dJDS6r/sboQ7yoKEbfHEldVcPa8lXqkTtLb2eicFVVS3bGJIBXC3mPKe8CYd/g==",
       "path": "folderbrowserforwpf/1.2.0",
       "hashPath": "folderbrowserforwpf.1.2.0.nupkg.sha512"
+    },
+    "DirectoryScanner.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

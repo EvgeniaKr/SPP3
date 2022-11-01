@@ -21,3 +21,5 @@ C:\mywork\SPPlabs\SPP_3\DirectoryScanner\DirectoryScanner.Example\obj\Debug\net6
 C:\mywork\SPPlabs\SPP_3\DirectoryScanner\DirectoryScanner.Example\obj\Debug\net6.0-windows\ref\DirectoryScanner.Example.dll
 C:\mywork\SPPlabs\SPP_3\DirectoryScanner\DirectoryScanner.Example\bin\Debug\net6.0-windows\FolderBrowserForWPF.dll
 C:\mywork\SPPlabs\SPP_3\DirectoryScanner\DirectoryScanner.Example\obj\Debug\net6.0-windows\DirectoryScanner.Example.csproj.CopyComplete
+C:\mywork\SPPlabs\SPP_3\DirectoryScanner\DirectoryScanner.Example\bin\Debug\net6.0-windows\DirectoryScanner.Core.dll
+C:\mywork\SPPlabs\SPP_3\DirectoryScanner\DirectoryScanner.Example\bin\Debug\net6.0-windows\DirectoryScanner.Core.pdb
