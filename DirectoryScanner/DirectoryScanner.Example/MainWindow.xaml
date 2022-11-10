@@ -12,7 +12,7 @@
         <Button Content="Start" HorizontalAlignment="Left" Height="33" Margin="10,41,0,0" VerticalAlignment="Top" Width="156" Command="{Binding StartAnalize}"/>
         <TreeView Name="TreeView1" HorizontalAlignment="Center" Height="345" Margin="0,79,0,0" VerticalAlignment="Top" Width="780">
             <TreeView.ItemTemplate>
-                <HierarchicalDataTemplate ItemsSource="{Binding Path = Value.allfiles}">
+                <HierarchicalDataTemplate ItemsSource="{Binding Path = Value.Allfiles}">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock>
                             <TextBlock.Text>
