@@ -1,15 +1,18 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {
+    "net6.0-windows7.0": {
       "FolderBrowserForWPF/1.2.0": {
         "type": "package",
         "compile": {
-          "lib/net472/FolderBrowserForWPF.dll": {}
+          "lib/net5.0-windows7.0/FolderBrowserForWPF.dll": {}
         },
         "runtime": {
-          "lib/net472/FolderBrowserForWPF.dll": {}
-        }
+          "lib/net5.0-windows7.0/FolderBrowserForWPF.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
       }
     }
   },
@@ -29,7 +32,7 @@
     }
   },
   "projectFileDependencyGroups": {
-    "net6.0": [
+    "net6.0-windows7.0": [
       "FolderBrowserForWPF >= 1.2.0"
     ]
   },
@@ -55,15 +58,15 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net6.0"
+        "net6.0-windows"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net6.0-windows7.0": {
+          "targetAlias": "net6.0-windows",
           "projectReferences": {}
         }
       },
@@ -74,8 +77,8 @@
       }
     },
     "frameworks": {
-      "net6.0": {
-        "targetAlias": "net6.0",
+      "net6.0-windows7.0": {
+        "targetAlias": "net6.0-windows",
         "dependencies": {
           "FolderBrowserForWPF": {
             "target": "Package",
@@ -96,22 +99,13 @@
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
+          },
+          "Microsoft.WindowsDesktop.App.WPF": {
+            "privateAssets": "none"
           }
         },
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Пакет \"FolderBrowserForWPF 1.2.0\" был восстановлен с помощью \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\", а не целевой платформы проекта \"net6.0\". Этот пакет может быть не полностью совместим с вашим проектом.",
-      "libraryId": "FolderBrowserForWPF",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    }
-  ]
+  }
 }

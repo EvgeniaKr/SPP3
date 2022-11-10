@@ -11,12 +11,14 @@ namespace DirectoryScanner.Example
     public class ViewModel : DirectoryScanner.Core.IPropertyChanged
     {
         public RelayCommand OpenDialog { get; }
+        public RelayCommand StartAnalize { get; }
+        public Tracer tracer { get; }
         public ViewModel()
         {
+            tracer = new Tracer();
             OpenDialog = new RelayCommand(o => { OpenDirectore(); });
-           
+            StartAnalize = new RelayCommand(o => tracer.Start(Path));
         
-
         }
         
         private void OpenDirectore()
@@ -24,9 +26,7 @@ namespace DirectoryScanner.Example
             var FolderPath = new FolderBrowserForWPF.Dialog();
             if (FolderPath.ShowDialog() == true)
             {
-                
                 Path = FolderPath.FileName;
-                
             }
         }
         private string str;

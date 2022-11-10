@@ -11,9 +11,6 @@ namespace DirectoryScanner.Core
     {
         
         public event PropertyChangedEventHandler? PropertyChanged;
-
-       
-
         protected void Change(string path) 
         {
             if (PropertyChanged != null)

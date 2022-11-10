@@ -25,7 +25,10 @@
         },
         "runtime": {
           "bin/placeholder/DirectoryScanner.Core.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
       }
     }
   },
