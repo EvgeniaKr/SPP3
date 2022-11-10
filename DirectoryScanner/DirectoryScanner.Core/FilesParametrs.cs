@@ -7,22 +7,26 @@ using System.Windows.Threading;
 
 namespace DirectoryScanner.Core
 {
-    public class File : IPropertyChanged//INotifyPropertyChangeded
+    public class FilesParametrs : IPropertyChanged//INotifyPropertyChangeded
     {
 
         private string name;
         public string Name { get { return name; } set { name = value; Change(nameof(Name)); } }
         public string FullName { get; set; }
 
-
-        public File(string fullname, long size)
+        public FilesCollection Files { get; set; }
+        public FilesParametrs(string fullname, long size, Dispatcher dispatcher)
         {
             FullName = fullname;
+            Name = System.IO.Path.GetFileName(fullname);
+            Files = new FilesCollection(dispatcher);
         }
 
-        public File(string fullname)
+        public FilesParametrs(string fullname, Dispatcher dispatcher)
         {
             FullName = fullname;
+            Name = System.IO.Path.GetFileName(fullname);
+            Files = new FilesCollection(dispatcher);
         }
     }
 }
