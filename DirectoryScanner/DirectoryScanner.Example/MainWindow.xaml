@@ -28,5 +28,6 @@
                 </HierarchicalDataTemplate>
             </TreeView.ItemTemplate>
         </TreeView>
+        <Button Content="Stop" HorizontalAlignment="Left" Height="33" Margin="185,41,0,0" VerticalAlignment="Top" Width="156" Command="{Binding StopAnalize}"/>
     </Grid>
 </Window>

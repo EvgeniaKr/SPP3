@@ -12,13 +12,15 @@ namespace DirectoryScanner.Example
     {
         public RelayCommand OpenDialog { get; }
         public RelayCommand StartAnalize { get; }
+        public RelayCommand StopAnalize { get; }
         public Tracer tracer { get; }
         public ViewModel()
         {
             tracer = new Tracer();
             OpenDialog = new RelayCommand(o => { OpenDirectore(); });
             StartAnalize = new RelayCommand(o => tracer.Start(Path));
-        
+            StopAnalize = new RelayCommand(o => tracer.Stop(Path));
+
         }
         
         private void OpenDirectore()

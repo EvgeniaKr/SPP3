@@ -112,7 +112,12 @@ namespace DirectoryScanner.Core
 
             }
         }
-
+        public void Stop(string Path)
+        {
+            if (cancelToken != null)
+                cancelToken.Cancel();
+            queue.IsWorking = 2;
+        }
 
     }
 }
