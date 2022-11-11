@@ -26,7 +26,7 @@ namespace DirectoryScanner.Example
             
             InitializeComponent();
             viewModel = new ViewModel();
-            TreeView1.ItemsSource = viewModel.tracer.Allfiles;
+            TreeView1.ItemsSource = viewModel.tracer.Files;
             this.DataContext = viewModel;
         }
 
