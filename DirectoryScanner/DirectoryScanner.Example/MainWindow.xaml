@@ -16,8 +16,10 @@
                     <StackPanel Orientation="Horizontal">
                         <TextBlock>
                             <TextBlock.Text>
-                                <MultiBinding StringFormat="{} {0}">
+                                <MultiBinding StringFormat="{} {0} ({1} байт, {2:N2}%)">
                                     <Binding Path="Value.Name" />
+                                    <Binding Path="Value.Size" />
+                                    <Binding Path="Value.Percent" />
                                 </MultiBinding>
                             </TextBlock.Text>
                         </TextBlock>

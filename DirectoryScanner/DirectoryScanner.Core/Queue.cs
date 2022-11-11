@@ -14,6 +14,7 @@ namespace DirectoryScanner.Core
         private ConcurrentQueue<WaitCallbackFunction> queue;
         private ParallelOptions parOpts;
         private Semaphore pooll;
+        internal Steake steake;
 
         private int i;
         public int IsWorking
@@ -30,9 +31,13 @@ namespace DirectoryScanner.Core
             queue = new ConcurrentQueue<WaitCallbackFunction>();
             parOpts = parallelOptions;
             pooll = pool;
+            steake = new Steake();
         }
 
-
+        internal void AddToStack(FilesParametrs file)
+        {
+            steake.Add(file);
+        }
         internal void AddToQueue(WaitCallback waitCallback, String path, FilesCollection files)
         {
             queue.Enqueue(new WaitCallbackFunction(waitCallback, path, files));
@@ -67,6 +72,7 @@ namespace DirectoryScanner.Core
 
                 ThreadPool.GetAvailableThreads(out num1, out num2);
             } while (internalNumOfThreads - num1 != 0 && !parOpts.CancellationToken.IsCancellationRequested);
+            steake.getSizes();
             i = 2;
             queue.Clear();
             i = 3;

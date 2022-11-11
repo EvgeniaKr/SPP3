@@ -30,7 +30,6 @@ namespace DirectoryScanner.Core
             Files = new FilesCollection();
             dispatcher = Dispatcher.CurrentDispatcher;
             pool = new Semaphore(initialCount: MAX_THREADS, maximumCount: MAX_THREADS);
-
             parOpts = new ParallelOptions();
             queue = new Queue(parOpts, pool);
         }
@@ -38,9 +37,7 @@ namespace DirectoryScanner.Core
         {
             MainPath = Path;
             queue.AddToQueue(new WaitCallback(handle), MainPath, Files);
-
             Task.Factory.StartNew(() => queue.InvokeThreadInQueue());
-            DirFil();
             
         }
         public void handle(object stateInfo)
@@ -48,17 +45,21 @@ namespace DirectoryScanner.Core
             Array argArray = (Array)stateInfo;
             string path = (string)argArray.GetValue(0);
             FilesCollection node = (FilesCollection)argArray.GetValue(1);
-            //  getValuesFromObject(stateInfo,out path,out node);
             AddDirectory(node, path);
             pool.Release();
 
         }
-        private void AddDirectory(FilesCollection node, string directory)
+        private void AddDirectory(FilesCollection fille, string path)
         {
-            var currDirectory = new FilesParametrs(directory, dispatcher);
-            
+            var currDirectory = new FilesParametrs(path, path.Length, dispatcher, true);
+            if (MainPath == path)
+            {
+                currDirectory.Percent = 100;
+            }
+
             Thread.Sleep(200);
-            node.Add(currDirectory);
+            fille.Add(currDirectory);
+            queue.AddToStack(currDirectory);
 
             // AddDirectories(currDirectory);
             try
@@ -103,7 +104,7 @@ namespace DirectoryScanner.Core
                     }
 
                     Thread.Sleep(200); //under the question
-                    currDirectory.Files.Add(new FilesParametrs(f.FullName, f.Length, dispatcher));
+                    currDirectory.Files.Add(new FilesParametrs(f.FullName, f.Length, dispatcher, false));
                 }
             }
             catch (UnauthorizedAccessException)
@@ -111,10 +112,7 @@ namespace DirectoryScanner.Core
 
             }
         }
-        public void DirFil()
-        {
-            
-        }
-        
+
+
     }
 }
